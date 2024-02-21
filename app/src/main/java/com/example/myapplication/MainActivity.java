@@ -11,27 +11,27 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextWeight;
-    private RadioGroup radioGroupUnits;
-    private RadioButton radioGrams, radioKilograms, radioCentners, radioTons;
-    private Button buttonCalculate;
-    private TextView textViewResult;
+    private EditText weight;
+    private RadioGroup group;
+    private RadioButton grams, kg, cent, tons;
+    private Button button;
+    private TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextWeight = findViewById(R.id.editTextWeight);
-        radioGroupUnits = findViewById(R.id.radioGroupUnits);
-        radioGrams = findViewById(R.id.radioGrams);
-        radioKilograms = findViewById(R.id.radioKilograms);
-        radioCentners = findViewById(R.id.radioCentners);
-        radioTons = findViewById(R.id.radioTons);
-        buttonCalculate = findViewById(R.id.buttonCalculate);
-        textViewResult = findViewById(R.id.textViewResult);
+        weight = findViewById(R.id.weight);
+        group = findViewById(R.id.group);
+        grams = findViewById(R.id.grams);
+        kg = findViewById(R.id.Kg);
+        cent = findViewById(R.id.cent);
+        tons = findViewById(R.id.tons);
+        button = findViewById(R.id.button);
+        result = findViewById(R.id.result);
 
-        buttonCalculate.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 calculateWeight();
@@ -40,21 +40,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void calculateWeight() {
-        double weight = Double.parseDouble(editTextWeight.getText().toString());
+        double weight = Double.parseDouble(Weight.getText().toString());
         double result;
 
-        if (radioGrams.isChecked()) {
-            result = weight;
-            textViewResult.setText("Результат: " + result + " грамм");
+        if (grams.isChecked()) {
+            result1 = weight;
+            result.setText("Результат: " + result1 + " грамм");
         } else if (radioKilograms.isChecked()) {
-            result = weight * 0.001;
-            textViewResult.setText("Результат: " + result + " килограмм");
+            result2 = weight * 0.001;
+            result.setText("Результат: " + result2 + " килограмм");
         } else if (radioCentners.isChecked()) {
-            result = weight * 0.00001;
-            textViewResult.setText("Результат: " + result + " центнер");
+            result3 = weight * 0.00001;
+            result.setText("Результат: " + result3 + " центнер");
         } else if (radioTons.isChecked()) {
-            result = weight * 0.000001;
-            textViewResult.setText("Результат: " + result + " тонна");
+            result4 = weight * 0.000001;
+            result.setText("Результат: " + result4 + " тонна");
         }
     }
 }

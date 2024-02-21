@@ -7,13 +7,13 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/editTextWeight"
+        android:id="@+id/weight"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:hint="Введите вес" />
 
     <RadioGroup
-        android:id="@+id/radioGroupUnits"
+        android:id="@+id/group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/editTextWeight"
@@ -21,32 +21,32 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioGrams"
+            android:id="@+id/grams"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Граммы" />
 
         <RadioButton
-            android:id="@+id/radioKilograms"
+            android:id="@+id/kg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Килограммы" />
 
         <RadioButton
-            android:id="@+id/radioCentners"
+            android:id="@+id/cent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Центнеры" />
 
         <RadioButton
-            android:id="@+id/radioTons"
+            android:id="@+id/tons"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Тонны" />
     </RadioGroup>
 
     <Button
-        android:id="@+id/buttonCalculate"
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/radioGroupUnits"
@@ -54,7 +54,7 @@
         android:text="Рассчитать" />
 
     <TextView
-        android:id="@+id/textViewResult"
+        android:id="@+id/result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonCalculate"
